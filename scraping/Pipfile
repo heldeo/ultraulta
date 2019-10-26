@@ -13,6 +13,7 @@ urlopen = "*"
 beautifulsoup = "*"
 bs4 = "*"
 jsonpickle = "*"
+re = "*"
 
 [requires]
 python_version = "3.7"
