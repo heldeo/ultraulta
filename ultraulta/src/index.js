@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import Landing from './Landing'
+import Landing from './Landing';
+import Results   from './Results';
 
 ReactDOM.render(
     <BrowserRouter>
