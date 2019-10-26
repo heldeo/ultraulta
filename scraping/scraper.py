@@ -35,7 +35,7 @@ def getRecommendedProducts(s):
     soup = BeautifulSoup(html, 'lxml')
 
     if html.code is not 200:
-        exit("failure")
+        exit("malformed url querying ULTA website")
 
     names = []
     prices = []
