@@ -4,12 +4,12 @@ Flask backend + apis
 
 ## Startup
 ```sh $
-$pip3 install pipenv
-$pipenv install
-$pipenv shell
+pip3 install pipenv
+pipenv install
+pipenv shell
 ```
 Now you are inside the shell, run these
 ```sh
-$flask run
+flask run
 ```
 And the app is running!
