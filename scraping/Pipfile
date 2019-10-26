@@ -6,6 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+lxml = "*"
+flask = "*"
+request = "*"
+urlopen = "*"
+beautifulsoup = "*"
+bs4 = "*"
+jsonpickle = "*"
 
 [requires]
 python_version = "3.7"

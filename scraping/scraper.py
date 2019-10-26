@@ -1,16 +1,20 @@
-import pandas as pd
-import numpy as np
-import seaborn as sns
+from flask import Flask
+from flask import request
+from flask import Response
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from flask import jsonify
+import json
 
-# url = "https://www.ulta.com/ulta/a/_/Ntt-too%20face/Nty-1?Dy=1&ciSelector=searchResults"
-url = "https://www.ulta.com/brand/mac?N=1z12lx1Z1tecpti"
-html = urlopen(url)
-soup = BeautifulSoup(html, 'lxml')
+app = Flask(__name__)
 
-if html.code is not 200:
-    exit("failure")
+
+@app.route('/api/recommended')
+def recommended():
+    productSearch = request.args.get('product')
+
+    resp = getRecommendedProducts(productSearch)
+    return json.dumps(resp)
 
 
 class Product:
@@ -19,22 +23,27 @@ class Product:
         self.price = price
 
 
-names = []
-prices = []
-for product in soup.findAll("div", {"class": "productQvContainer"}):
-    for p in product.findAll("div", {"class": "prod-title-desc"}):
-        stringProduct = p.contents[1].text.strip(
-        ) + " " + p.contents[3].text.strip()
-        names.append(stringProduct)
+def getRecommendedProducts(s):
+    url = "https://www.ulta.com/ulta/a/_/Ntt-" + \
+        s.strip() + "/Nty-1?Dy=1&ciSelector=searchResults"
+    html = urlopen(url)
+    soup = BeautifulSoup(html, 'lxml')
 
-    for p in product.findAll("div", {"class": "productPrice"}):
-        prices.append(p.contents[3].text.strip())
+    if html.code is not 200:
+        exit("failure")
 
+    names = []
+    prices = []
+    for product in soup.findAll("div", {"class": "productQvContainer"}):
+        for p in product.findAll("div", {"class": "prod-title-desc"}):
+            stringProduct = p.contents[1].text.strip(
+            ) + " " + p.contents[3].text.strip()
+            names.append(stringProduct.strip())
 
-products = []
-for i in range(0, len(names)):
-    p = Product(names[i], prices[i])
-    products.append(p)
-
-for p in products:
-    print(p.name)
+        for p in product.findAll("div", {"class": "productPrice"}):
+            prices.append(p.contents[3].text.strip())
+    products = []
+    for i in range(0, len(names)):
+        p = Product(names[i], prices[i])
+        products.append(json.dumps(p.__dict__))
+    return products
