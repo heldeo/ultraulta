@@ -1,9 +1,20 @@
-.App {
-  text-align: center;
-  background-image: url('ultra-background.jpg')
+html  {
+  background-color: #cccccc;
+
+  background-image: url("ultra-background.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 75% 100%; */
+  background-size: cover;
+
+
+
 }
 
-.App-logo {
+/* .App{
+  background-image: url("ultra-background.jpg");
+} */
+
+/* .App-logo {
   height: 40vmin;
 }
 
@@ -22,6 +33,6 @@
 .App-link {
   color: #09d3ac;
 }
-
+ */
 
 
