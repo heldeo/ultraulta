@@ -1,11 +1,6 @@
 html  {
   background-color: #cccccc;
 
-  background-image: url("ultra-background.jpg");
-  background-repeat: no-repeat;
-  /* background-size: 75% 100%; */
-  background-size: cover;
-
 
 
 }
@@ -34,5 +29,3 @@ html  {
   color: #09d3ac;
 }
  */
-
-
