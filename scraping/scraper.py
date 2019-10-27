@@ -65,5 +65,8 @@ def getRecommendedProducts(s):
 
     for i in range(0, len(names)):
         p = Product(names[i], prices[i], pics[i], url[i])
-        products.append(json.dumps(p.__dict__))
+        o = json.dumps(p.__dict__)
+        m = json.loads(o)
+        products.append(m)
+
     return products[:8]
