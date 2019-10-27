@@ -14,6 +14,8 @@ beautifulsoup = "*"
 bs4 = "*"
 jsonpickle = "*"
 re = "*"
+gensim = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.7"
