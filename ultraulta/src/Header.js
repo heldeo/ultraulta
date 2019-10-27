@@ -9,7 +9,6 @@ function Header(props){
 
     return(
         <Navbar class = "navbar-inner"className='justify-content-center' >
-          <Col><br></br></Col>
         <Navbar.Brand class ='navbar-logo'>
           <img 
             src={Logo}

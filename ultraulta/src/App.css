@@ -1,19 +1,35 @@
-html, body  {
+/* html  {
   background-color: #cccccc;
 
   background-image: url("ultra-background.jpg");
-  background-repeat: repeat;
-  background-size: 100% 100%;
-  background-size: contain;
+  /* background-size: 100% 100%; */
+  /* background-size: contain; */
 
 
 
 
-}
 
-/* .App{
-  background-image: url("ultra-background.jpg");
+
+/* 
+body{
+
+  
+  
+    background-image: url("ultra-background.jpg");
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+  
+  
+  
+  
 } */
+
+
+/* 
+ .App{
+  background-image: url("ultra-background.jpg");
+}  */
 
 /* .App-logo {
   height: 40vmin;

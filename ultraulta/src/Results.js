@@ -7,7 +7,7 @@ import {CardDeck} from 'react-bootstrap';
 // import Queries from './Queries';
 import Magna from './Magna';
 import Collection from './Collection'
-
+import './Results.css'
 function Results(props){
 
 
@@ -16,8 +16,10 @@ function Results(props){
         <Container>
             <Row>
             <Header/>
+            
             </Row>
 
+            <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
@@ -38,6 +40,10 @@ function Results(props){
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
+            <Row><Col xs = {12} md={12}><br></br></Col></Row>
+            <Row><Col xs = {12} md={12}><br></br></Col></Row>
+            <Row><Col xs = {12} md={12}><br></br></Col></Row>
+
             <CardDeck>
                 <Magna/>
                 <Magna/>
