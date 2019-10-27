@@ -1,14 +1,16 @@
 html  {
-  background-color: #cccccc;
-
+  background: 'transparent';
+  background-color: brown;
+/* 
   background-image: url("ultra-background.jpg");
   background-repeat: no-repeat;
   /* background-size: 75% 100%; */
-  background-size: cover;
 
 
 
 }
+
+
 
 /* .App{
   background-image: url("ultra-background.jpg");

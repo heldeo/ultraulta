@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Landing from './Landing';
 import Results   from './Results';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -16,8 +17,8 @@ ReactDOM.render(
     </Switch>
 </App>,
 
-</BrowserRouter>
-, document.getElementById('root'));
+</BrowserRouter>, 
+document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,52 @@
+@import url("https://use.typekit.net/ywt7mqv.css"); /*For the Adobe Permanent Marker font*/
+
+body,html {
+    background-color:white;
+    background-repeat: scroll;
+    /* background-position: left top; */
+    /* background-attachment: fixed; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-back{
+    position: absolute;
+    /* top: 10%;
+    left: 10%; */
+    /* transform: translate(10%, 10%); */
+    height: 1100px;
+    width: 2000px;
+}
+.img-logo{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    height:80px;
+}
+
+.title{
+    position: relative;
+    color:"#36271F";
+    font-family: permanent-marker, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    top:300px;
+    left: 50px;
+}
+.row{
+    position: absolute;
+    background: 'transparent';
+    height: 5000px;
+}
+
+.header{
+    position: absolute;
+    opacity: 0.9;
+    background: 'transperant';
+}
+  
