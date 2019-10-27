@@ -15,11 +15,10 @@ function SearchField(){
         }} />
     }
     function apiCall(){
-        fetch("http://09905ae6.ngrok.io/api/recommended")
+        fetch("http://9d39e25c.ngrok.io/api/recommended")
         .then(res => res.json())
         .then( (result)=>{
             setData(result);
-
             setRedirect(true);
             console.log(result);
         })
@@ -52,6 +51,12 @@ function SearchField(){
 //     });
 
       if(redirect){
+          data.pop();
+          data.pop();
+          
+          
+
+
           return <Redirect to={{pathname:"/results",state:{data} }}/>
       }
     return (

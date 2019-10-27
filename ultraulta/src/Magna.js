@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Card,CardDeck,Row,Col} from 'react-bootstrap';
 
 import Stock1 from './stock1.jpeg';
@@ -10,23 +10,31 @@ import {Button} from 'react-bootstrap';
 
 import './Magna.css';
 
-function Magna(props){
-
+function Magna({name,price,picUrl,productUlr}){
+    useEffect(()=>{
+      console.log()
+    })
     return(
 
         
         <Card style ={{width:'6em'}} className = "border-dark text-center rounded mb-0"  >
-        <Card.Img  src={Stock1} />
+          <div>
+        <Card.Img  style={{width:'40%',float:"center"}}src={picUrl} />
+        </div>
         <Card.Body>
-          <Card.Title>Item</Card.Title>
+          <Card.Title style={{fontsize:'8'}}>{name}</Card.Title>
           <Card.Text>
-              Appearance: 
+              {price}
           </Card.Text>
         </Card.Body>
         {/* <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer> */}
-        <Button variant="primary">Find in Market</Button>
+        <a href = {productUlr}>
+          <div>
+        <Button className='align-text-top' variant="danger" size='lg'> Find on Ulta!</Button>
+        </div>
+        </a>
 
       </Card>
         );
