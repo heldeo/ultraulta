@@ -63,7 +63,7 @@ class MakeupParser:
         
         #MAKEUP MODEL
         filename = 'GoogleNews-vectors-negative300.bin'
-#         self.model = KeyedVectors.load_word2vec_format(filename, binary=True)
+        self.model = KeyedVectors.load_word2vec_format(filename, binary=True)
         with open('libstick.pkl', 'rb') as f:
             self.clf = pickle.load(f)
         
@@ -144,13 +144,16 @@ CORS(app, support_credentials=True)
 @app.route('/api/recommended', methods=['GET', 'POST'])
 def recommended():
     # productSearch = str(request.args.get('product'))
-    youtube = request.form.get('url')
-    print(youtube)
-    resp = getAllProducts(mp.getBeutyProducts(youtube))
-    if len(resp) is 0:
-        # print("bad request on: " youtub+ productSearch)
-        abort(400)
-    return json.dumps(resp)
+    try:
+        youtube = request.form.get('url')
+        print(youtube)
+        resp = getAllProducts(mp.getBeutyProducts(youtube))
+        if len(resp) is 0:
+            # print("bad request on: " youtub+ productSearch)
+            abort(400)
+        return json.dumps(resp)
+    except:
+        return json.dumps([])
 
 
 class Product:
