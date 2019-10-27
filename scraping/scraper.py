@@ -13,10 +13,11 @@ app = Flask(__name__)
 CORS(app, support_credentials=True)
 
 
-@app.route('/api/recommended')
+@app.route('/api/recommended', methods=['GET', 'POST'])
 def recommended():
     # productSearch = str(request.args.get('product'))
     youtube = request.form.get('url')
+    print(youtube)
     resp = getRecommendedProducts("lipstick")
     if len(resp) is 0:
         # print("bad request on: " youtub+ productSearch)
