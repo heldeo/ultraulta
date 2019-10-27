@@ -15,6 +15,8 @@ function Results(props){
 
     useEffect(()=>{
         console.log(props);
+         
+        // console.log(props.pop());
     })
     // const [dataObject,setdataObject] = useState(null);
     // const [dataMap,setdataMap] = useState(null)
@@ -71,11 +73,11 @@ function Results(props){
             <Row><Col xs = {12} md={12}><br></br></Col></Row>
             <CardDeck>
                 {props.location.state.data.map( (post)=>
-                        <Magna name={post.name} price={post.price} productUlr={post.productUlr} picUrl={post.picUrl}/>
+                        <Magna name={post.name} price={post.price} productUlr={post.productUlr} picUrl={post.picUrl} time={post.time}/>
 
                 )}
             </CardDeck>
-            
+            <Row><Col><br></br></Col></Row>
 
        
             {/* <CardDeck>

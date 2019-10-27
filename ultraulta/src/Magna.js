@@ -10,30 +10,32 @@ import {Button} from 'react-bootstrap';
 
 import './Magna.css';
 
-function Magna({name,price,picUrl,productUlr}){
+function Magna({name,price,picUrl,productUlr,time}){
     useEffect(()=>{
       console.log()
     })
     return(
 
         
-        <Card style ={{width:'6em'}} className = "border-dark text-center rounded mb-0"  >
+        <Card class = "mw-100" style ={{width:'12em'}} className = "border-dark thick text-center rounded mb-3 flex"  >
           <div>
-        <Card.Img  style={{width:'40%',float:"center"}}src={picUrl} />
+        <Card.Img  style={{width:'43%',float:"center"}}src={picUrl} />
         </div>
         <Card.Body>
           <Card.Title style={{fontsize:'8'}}>{name}</Card.Title>
-          <Card.Text>
+          {/* <Card.Text>
               {price}
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
-        {/* <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer> */}
+        <Card.Footer>
+          <small className="text-muted">Time Stamp: <br></br>{time}</small>
+        </Card.Footer>
+        
         <a href = {productUlr}>
           <div>
-        <Button className='align-text-top' variant="danger" size='lg'> Find on Ulta!</Button>
+        <Button  style={{float:"top"}} variant="danger" > Find on Ulta!</Button>
         </div>
+        <Row><br></br></Row>
         </a>
 
       </Card>
