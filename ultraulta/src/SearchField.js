@@ -8,11 +8,11 @@ function SearchField(){
     return (
             <InputGroup className='mb-3'>
                 <FormControl
-                placeholdder="https://www.youtube.com/watch?v=C7FxWHd_vsk"
+                placeholder="https://www.youtube.com/Your_Makeup_Video!"
 
                 />
                 <InputGroup.Append>
-                <Button variant='outline-primary'>Get Makeup!</Button>
+                <Button variant= 'success'>Get Makeup!</Button>
                 </InputGroup.Append>
             </InputGroup>
 
@@ -21,6 +21,4 @@ function SearchField(){
 
 
 }
-
-
 export default SearchField;

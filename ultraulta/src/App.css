@@ -1,6 +1,8 @@
 html  {
   background: 'transparent';
-  background-color: brown;
+  background-color: white;
+
+}
 /* 
   background-image: url("ultra-background.jpg");
   background-repeat: no-repeat;
@@ -8,13 +10,18 @@ html  {
 
 
 
-}
 
 
 
 /* .App{
   background-image: url("ultra-background.jpg");
 } */
+
+
+/*
+ .App{
+  background-image: url("ultra-background.jpg");
+}  */
 
 /* .App-logo {
   height: 40vmin;
@@ -36,5 +43,3 @@ html  {
   color: #09d3ac;
 }
  */
-
-

@@ -25,6 +25,6 @@ function Landing(props){
         </Container>
         </div>
     );
-}
- 
+  }
 export default Landing;
+
